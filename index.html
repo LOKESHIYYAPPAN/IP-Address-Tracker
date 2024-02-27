@@ -27,12 +27,12 @@
 <body>
   <header class=" mx-auto position-relative ">
     <h1 class="text-center py-2 py-sm-4 pt-md-5 text-white">IP Address Tracker</h1>
-    <div class="input-group input-group-lg mx-auto" style="max-width: 340px;">
+    <form class="input-group input-group-lg mx-auto" id="form" style="max-width: 340px;">
       <input type="text" class="form-control text-center" style="border-radius: 15px 0 0 15px;" name="Search" id="search" placeholder="Search for any IP address" value="192.212.174.101">
-      <button class="btn btn-dark d-flex justify-content-center align-items-center" style="border-radius: 0 15px 15px 0;" onclick="handleSearch()">
+      <button type="submit" class="btn btn-dark d-flex justify-content-center align-items-center" style="border-radius: 0 15px 15px 0;">
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
       </button>
-    </div>
+    </form>
     <div class=" p-4 col-10 row bg-white rounded-4 mx-auto position-absolute " style="top: 100%; left: 50%; transform: translate(-50%, -50%); z-index: 999;">
       <div class="mb-3 text-center  col-12 col-sm-6 col-md-3 d-flex flex-column justify-content-between ">
         <p class="title mb-1">IP Address</p>

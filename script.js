@@ -3,6 +3,7 @@ const ipdiv = document.getElementById("ip")
 const loca = document.getElementById("location")
 const timezone = document.getElementById("timezone")
 const isp = document.getElementById("isp")
+const form = document.getElementById("form")
 
 let map;
 
@@ -17,7 +18,9 @@ function setBg(){
 }
 setBg()
 
-async function handleSearch(){
+
+form.addEventListener("submit", async(e) =>{
+    e.preventDefault()
     const ip = document.getElementById("search").value
     const response = await fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_H4ERnHNwdsHcgfr5QF2BoXoGoIEOQ&ipAddress=${ip}`)
     const data  = await response.json()
@@ -28,7 +31,7 @@ async function handleSearch(){
     isp.innerHTML = data.isp
 
     handleCoordinates(ip)
-}
+})
 
 function handleMap(lat, lon){
     if(!map){
@@ -49,6 +52,5 @@ async function handleCoordinates(ip){
     handleMap(data.lat, data.lon)
     console.log(data.lat, data.lon)
 }
-
 window.addEventListener("resize",setBg)
 handleMap(34.0536, -118.084)
