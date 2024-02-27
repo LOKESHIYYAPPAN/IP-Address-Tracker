@@ -9,10 +9,10 @@ let map;
 
 function setBg(){
     if(window.innerWidth <= 375){
-        header.style.backgroundImage = "url(images/pattern-bg-mobile.png)";
+        header.style.backgroundImage = "url(./images/pattern-bg-mobile.png)";
     }
     else{
-        header.style.backgroundImage = "url(images/pattern-bg-desktop.png)"
+        header.style.backgroundImage = "url(./images/pattern-bg-desktop.png)"
     }
 }
 setBg()
